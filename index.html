@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 137 Mark Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Math 137 Mark Calculator</h1>
+
+    <!-- Description of Mark Breakdown -->
+    <div class="description">
+        <p>This calculator is based on the following breakdown for Math 137:</p>
+        <ul>
+            <li>Quizzes: 20% (Best 9 out of 10 quizzes, lowest quiz dropped)</li>
+            <li>Midterm: 30% (If exempt, final exam is worth 80%)</li>
+            <li>Final Exam: 50% (or 80% if midterm is exempt)</li>
+            <li>Participation: Bonus of 2% (1% for 60-79%, 2% for 80-100%)</li>
+        </ul>
+    </div>
+
+    <!-- Participation Bonus -->
+    <div class="slider-container">
+        <label for="participation">Participation (% of questions answered): <span id="participation-score">0</span>%</label><br>
+        <input type="range" id="participation" min="0" max="100" value="0">
+    </div>
+
+    <!-- Quizzes -->
+    <div class="slider-container">
+        <h3>Quizzes (10 equally weighted, drop lowest, exempt option):</h3>
+        <div id="quizzes-container">
+            <!-- Quizzes will be dynamically generated in JS -->
+        </div>
+        <p id="dropped-quiz" class="dropped-quiz"></p>
+    </div>
+
+    <!-- Midterm and Final Exam -->
+    <div class="slider-container">
+        <label for="midterm">Midterm Exam (30%): <span id="midterm-score">0</span>%</label><br>
+        <input type="range" id="midterm" min="0" max="100" value="0">
+        <input type="checkbox" id="midterm-exempt"> Exempt Midterm
+    </div>
+
+    <div class="slider-container">
+        <label for="final">Final Exam (<span id="final-weight">50</span>%): <span id="final-score">0</span>%</label><br>
+        <input type="range" id="final" min="0" max="100" value="0">
+    </div>
+
+    <h2>Total Grade: <span id="total-grade">0</span>%</h2>
+
+    <!-- Target Grade -->
+    <div class="target-grade-container">
+        <label for="target-grade">Target Final Grade: </label><br>
+        <input type="number" id="target-grade" min="0" max="100" placeholder="Enter target grade">
+        <button onclick="calculateRequiredMarks()">Calculate Required Marks</button>
+    </div>
+    <h3 id="required-marks"></h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
