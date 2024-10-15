@@ -1,1 +1,2 @@
 # Grade-Calculator
+This mark calculator app helps university students track and project their grades in real-time using sliders for quizzes, midterms, finals, and participation. It automatically drops the lowest quiz, allows exemptions for quizzes and the midterm (reweighting the final to 80% if exempt), and includes a target grade calculator to show the required marks for desired outcomes. Built with HTML, CSS, and JavaScript, the app offers a simple, intuitive interface with instant updates and a clear mark breakdown.
